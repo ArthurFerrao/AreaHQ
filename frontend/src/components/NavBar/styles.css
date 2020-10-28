@@ -1,0 +1,36 @@
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0px 1px 2px rgb(167, 166, 166);
+  font-size: 20px;
+}
+
+.nav-btns, .nav-auth-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-btns {
+  justify-content: space-around;
+  place-self: center stretch;
+}
+
+.nav-btn {
+  padding: 15px 10px;
+  color: #808080;
+}
+
+.login-btn {
+  color: #FF4141;
+}
+
+.sign-up-btn {
+  background-color: #FF4141;
+  color: #FFF;
+  padding: 7px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+}
