@@ -1,0 +1,11 @@
+.titles {
+  width: 100vw;
+}
+
+.titles-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 50vw;
+}
