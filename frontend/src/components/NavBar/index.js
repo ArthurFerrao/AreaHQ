@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav className='nav-bar'>
 
-      <div>LOGO</div>
+      <div className='logo'>Área<span>HQ</span></div>
       <SearchBar/>
 
       <div className='nav-btns'>
