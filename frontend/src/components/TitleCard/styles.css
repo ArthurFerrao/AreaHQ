@@ -23,7 +23,8 @@
   margin-bottom: 0.5rem;
 }
 
-.card-header h1 {
+.card-header h2 {
+  color: black;
   font-weight: normal;
 }
 

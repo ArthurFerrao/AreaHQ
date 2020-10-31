@@ -1,5 +1,6 @@
 import React from 'react'
 import SearchBar from '../SearchBar'
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -7,11 +8,11 @@ const NavBar = () => {
   return (
     <nav className='nav-bar'>
 
-      <div className='logo'>Área<span>HQ</span></div>
+      <Link className='logo' to='/'>Área<span>HQ</span></Link>
       <SearchBar/>
 
       <div className='nav-btns'>
-        <div className='nav-btn'>Títulos</div>
+        <Link className='nav-btn' to='/titles'>Títulos</Link>
 
         <div className='nav-auth-btns'>
           <div className='nav-btn login-btn'>Login</div>
