@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 
 .title-card img {
@@ -11,30 +12,13 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
-.title-type {
-  background-color: #FF4141;
-  color: #FFF;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.7rem;
-  font-size: 0.6rem;
-}
-
 .card-header {
   margin-bottom: 0.5rem;
 }
 
-.card-header h2 {
+.card-title {
   color: black;
   font-weight: normal;
-}
-
-.category-box {
-  background-color: #C3C3C3;
-  color: #5E5D5D;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.1rem;
-  font-size: 0.8rem;
-  margin-right: 0.2rem;
 }
 
 .card-info p {
