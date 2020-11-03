@@ -1,5 +1,5 @@
 const titlesDB = require('../data/titles.json');
-
+const chaptersDB = require('../data/chapters.json');
 
 exports.getAll = (req, res) => {
     const type = req.query.type;
@@ -19,8 +19,11 @@ exports.getAll = (req, res) => {
 };
 
 exports.getById = (req, res) => {
-    const id = req.params.id;
-    res.json(titlesDB[id]);
+    const id = Number(req.params.id);
+    const title = titlesDB[id];
+    const chapters = getChapters(id);
+
+    return res.status(200).json({...title, chapters: chapters});
 };
 
 exports.add = (req, res) => {
@@ -43,4 +46,8 @@ exports.update = (req, res) => {
     titlesDB[id] = title;
 
     return res.status(200).json(title);
+};
+
+const getChapters = (titleId) => {
+    return chaptersDB.filter(c => c.titleId === titleId);
 }
