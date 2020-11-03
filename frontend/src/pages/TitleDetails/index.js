@@ -16,13 +16,25 @@ const TitleDetails = () => {
       });
   }, []);
 
+  const getDateFormatted = (date) => {
+    const newDate = new Date(date);
+    console.log(newDate);
+    return `${newDate.getDay()}/${newDate.getMonth()}`;
+  }
+
   return (
-    <>
+    <div className='title-details'>
       {title && <TitleInfo title={title} />}
-      <div className='cap-list'>
-        
+
+      <div className='chapters-list'>
+        {title && title.chapters.map(c => 
+          <div>
+            <h3>Capitulo {c.num}</h3>
+            <h3>{getDateFormatted(c.createdAt)}</h3>
+          </div>
+        )}
       </div>
-    </>
+    </div>
   )
 }
 
