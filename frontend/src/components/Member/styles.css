@@ -1,0 +1,11 @@
+.member {
+  display: inline-flex;
+  align-items: center;
+}
+
+.user-img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2rem;
+  margin-right: 0.3rem;
+}

@@ -7,7 +7,7 @@
     "categories": [
       "Ação", "Aventura", "Comédia"
     ],
-    "image": "https://i.pinimg.com/236x/93/52/a2/9352a222635c99bcc21f2be8d03a19c7.jpg",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71qooWMXDhL.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
@@ -19,6 +19,17 @@
       "Ação", "Aventura"
     ],
     "image": "https://images-na.ssl-images-amazon.com/images/I/61CDuYoINqL.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 2,
+    "createdAt": "25/10/2020 15:40:22",
+    "name": "One Piece",
+    "type": "Quadrinho",
+    "categories": [
+      "Ação", "Aventura"
+    ],
+    "image": "https://vidadecolecionador.files.wordpress.com/2012/02/dbvrq.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 ]

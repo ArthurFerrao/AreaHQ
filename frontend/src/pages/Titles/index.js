@@ -17,7 +17,9 @@ const Titles = () => {
   return ( 
     <div className="titles">
       <div className="titles-list">
-        {titles.map(title => <TitleCard key={title.id} title={title}/>)}
+        {titles.map(title =>
+          <TitleCard key={title.id} title={title}/>
+        )}
       </div>
     </div>
   )

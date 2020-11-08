@@ -5,11 +5,12 @@
   padding: 0 2rem;
 }
 
-.title-card img {
-  width: 100px;
+.card-img {
+  max-width: 7rem;
   margin-right: 1rem;
   border-radius: 0.2rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  border:2px solid white;
 }
 
 .card-header {
@@ -17,6 +18,7 @@
 }
 
 .card-title {
+  display: inline-block;
   color: black;
   font-weight: normal;
 }
@@ -26,4 +28,11 @@
   margin-top: 1rem;
   overflow: hidden;
   color: #6A6A6A;
+}
+
+.card-members {
+  display: flex;
+  align-items: center;
+  color: rgb(88, 88, 88);
+  font-size: 0.7rem;
 }

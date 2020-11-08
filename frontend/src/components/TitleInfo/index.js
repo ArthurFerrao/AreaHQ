@@ -1,16 +1,18 @@
 import React from 'react';
 import CategoryBox from '../CategoryBox';
-import TypeBox from '../TypeBox';
+import Member from '../Member';
 
 import './styles.css';
 
 const TitleInfo = ({ title }) => (
-  <div className="title-info">
-    <img src={title.image}/>
-    <div className='info-container'>
+  <div className='title-info'>
+    <img className='info-img' src={title.image}/>
+    <div>
       <div className='info-header'>
         <h2>{title.name}</h2>
-        <TypeBox type={title.type} />
+        <div className='members'>
+          por &nbsp; <Member member={title.type} />(autor) e &nbsp;<Member member={title.type} /> (arte)
+        </div>
       </div>
       <div>
         {title.categories.map(category => <CategoryBox key={category} category={category} />)}

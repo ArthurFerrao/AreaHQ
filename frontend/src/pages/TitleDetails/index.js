@@ -24,13 +24,18 @@ const TitleDetails = () => {
 
   return (
     <div className='title-details'>
-      {title && <TitleInfo title={title} />}
-
+      {title && 
+        <div className='info'>
+          <div className="background-info" style={{backgroundImage: `url(${title.image})`}}></div>
+          <TitleInfo title={title} />
+        </div>
+      }
       <div className='chapters-list'>
+        <h1>Capitulos</h1>
         {title && title.chapters.map(c => 
-          <div>
-            <h3>Capitulo {c.num}</h3>
-            <h3>{getDateFormatted(c.createdAt)}</h3>
+          <div className='chapter-line'>
+            <span>Capitulo {c.num}</span>
+            <span>20/08</span>
           </div>
         )}
       </div>
