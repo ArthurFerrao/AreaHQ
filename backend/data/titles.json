@@ -7,16 +7,23 @@
     "categories": [
       "Ação", "Aventura", "Comédia"
     ],
+    "members":[
+      {"name": "Echiro Oda", "activity": "Autor"},
+      {"name": "Fulano", "activity": "Artista"}
+    ],
     "image": "https://images-na.ssl-images-amazon.com/images/I/71qooWMXDhL.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   {
     "id": 1,
     "createdAt": "25/10/2020 15:40:22",
-    "name": "Full Metal Alchemist",
+    "name": "Full Metal Alchemist: teste testes",
     "type": "Quadrinho",
     "categories": [
       "Ação", "Aventura"
+    ],
+    "members":[
+      {"name": "Echiro Oda", "activity": "all"}
     ],
     "image": "https://images-na.ssl-images-amazon.com/images/I/61CDuYoINqL.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -28,6 +35,10 @@
     "type": "Quadrinho",
     "categories": [
       "Ação", "Aventura"
+    ],
+    "members":[
+      {"name": "Echiro Oda", "activity": "Autor"},
+      {"name": "Fulano", "activity": "Artista"}
     ],
     "image": "https://vidadecolecionador.files.wordpress.com/2012/02/dbvrq.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

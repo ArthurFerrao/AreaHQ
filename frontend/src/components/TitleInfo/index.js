@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoryBox from '../CategoryBox';
-import Member from '../Member';
+import Members from '../Members';
 
 import './styles.css';
 
@@ -10,9 +10,7 @@ const TitleInfo = ({ title }) => (
     <div>
       <div className='info-header'>
         <h2>{title.name}</h2>
-        <div className='members'>
-          por &nbsp; <Member member={title.type} />(autor) e &nbsp;<Member member={title.type} /> (arte)
-        </div>
+        <Members members={title.members}/>
       </div>
       <div>
         {title.categories.map(category => <CategoryBox key={category} category={category} />)}

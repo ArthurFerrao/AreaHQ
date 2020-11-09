@@ -16,8 +16,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="chapters-list">
-        {chapters && chapters.map(chapter => <ChapterCard chapter={chapter} />)}
+      <div className="chapters-day-list">
+        {chapters && 
+          chapters.map(chapter => <ChapterCard chapter={chapter} />
+        )}
       </div>
     </div>
   )

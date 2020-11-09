@@ -29,10 +29,3 @@
   overflow: hidden;
   color: #6A6A6A;
 }
-
-.card-members {
-  display: flex;
-  align-items: center;
-  color: rgb(88, 88, 88);
-  font-size: 0.7rem;
-}

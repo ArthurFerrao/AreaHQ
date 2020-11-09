@@ -1,0 +1,6 @@
+.members {
+  display: flex;
+  align-items: center;
+  color: rgb(68, 68, 68);
+  font-size: 0.8rem;
+}

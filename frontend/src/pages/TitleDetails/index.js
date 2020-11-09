@@ -30,13 +30,15 @@ const TitleDetails = () => {
           <TitleInfo title={title} />
         </div>
       }
+      
       <div className='chapters-list'>
         <h1>Capitulos</h1>
-        {title && title.chapters.map(c => 
-          <div className='chapter-line'>
-            <span>Capitulo {c.num}</span>
-            <span>20/08</span>
-          </div>
+        {title && 
+          title.chapters.map(chapter => 
+            <div className='chapter-line'>
+              <span>Capitulo {chapter.num} {chapter.name? `- ${chapter.name}`: ''}</span>
+              <span>{chapter.createdAt}</span>
+            </div>
         )}
       </div>
     </div>

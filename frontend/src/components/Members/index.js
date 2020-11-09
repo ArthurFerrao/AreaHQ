@@ -1,0 +1,17 @@
+import React from 'react';
+import Member from '../Member';
+
+import './styles.css'
+
+const Members = ({ members }) =>  (
+  <div className='members'>
+    <span>por &nbsp;</span>
+    {members.map((member, id) => 
+      <>
+        <Member member={member}/> {(id < members.length-1) && <span>, &nbsp;</span>}
+      </>
+    )}
+  </div>
+)
+
+export default Members

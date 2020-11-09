@@ -9,8 +9,8 @@ const ChapterCard = ({chapter}) => (
       <div className='chapter-img' style={{backgroundImage: `url(${chapter.titleImage})`}}></div>
       <div className='chapter-num'>{chapter.num}</div>
     </Link>
-    <Link className='title-name' to={`/title/${chapter.titleId}`}>
-      <h2>{chapter.titleName}</h2>
+    <Link className='title-name-container' to={`/title/${chapter.titleId}`}>
+      <h2 className='title-name'>{chapter.titleName}</h2>
     </Link>
   </div>
 )

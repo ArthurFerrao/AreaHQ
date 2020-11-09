@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CategoryBox from '../CategoryBox';
-import Member from '../Member';
+import Members from '../Members';
 
 import './styles.css'
 
@@ -16,9 +16,7 @@ const TitleCard = ({title}) => {
           <Link className='card-title' to={`/title/${title.id}`}>
             <h2>{title.name}</h2>
           </Link>
-          <div className='card-members'>
-            por &nbsp; <Member member={title.type} />(autor) e &nbsp;<Member member={title.type} /> (arte)
-          </div>
+          <Members members={title.members}/>
         </div>
         <div>
           {title.categories.map(category => <CategoryBox key={category} category={category} />)}

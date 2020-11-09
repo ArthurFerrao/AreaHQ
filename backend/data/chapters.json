@@ -4,15 +4,15 @@
     "titleId": 0,
     "name": "",
     "num": 1,
-    "createdAt": "25/10/2020 15:40:22",
+    "createdAt": "25/10/20",
     "pages": ""
   },
   {
     "id": 1,
     "titleId": 0,
-    "name": "",
+    "name": "O retorno do capitão",
     "num": 2,
-    "createdAt": "25/10/2020 15:40:22",
+    "createdAt": "25/10/20",
     "pages": ""
   },
   {
@@ -20,7 +20,7 @@
     "titleId": 1,
     "name": "",
     "num": 1,
-    "createdAt": "25/10/2020 15:40:22",
+    "createdAt": "25/10/20",
     "pages": ""
   },
   {
@@ -28,15 +28,15 @@
     "titleId": 1,
     "name": "",
     "num": 2,
-    "createdAt": "25/10/2020 15:40:22",
+    "createdAt": "25/10/20",
     "pages": ""
   },
   {
-    "id": 3,
+    "id": 4,
     "titleId": 2,
     "name": "",
     "num": 1,
-    "createdAt": "25/10/2020 15:40:22",
+    "createdAt": "25/10/20",
     "pages": ""
   }
 ]
