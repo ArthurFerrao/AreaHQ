@@ -3,18 +3,20 @@ import { Link } from 'react-router-dom';
 
 import './styles.css'
 
-const ChapterCard = ({chapter}) => (
+const ChapterCard = ({chaptersSet}) => (
   <div className='chapter-card'>
-    <Link className='img-container' to={'/'}>
-      <div className='chapter-img' style={{backgroundImage: `url(${chapter.titleImage})`}}></div>
+    <Link className='img-container' to={`/title/${chaptersSet.titleName.split(' ').join('')}/chapter/${chaptersSet.id}`}>
+      <div className='chapter-img' style={{backgroundImage: `url(${chaptersSet.titleImage})`}}></div>
       <div className='numbers-container'>
-        {chapter.chapters.map(num => 
-          <div className='number-box' >{num}</div>
+        {chaptersSet.chapters.map(num => 
+          <Link className='number-box' to={`/title/${chaptersSet.titleName.split(' ').join('')}/chapter/${num}`}>
+            {num}
+          </Link>
         )}
       </div>
     </Link>
-    <Link className='title-name-container' to={`/title/${chapter.titleId}`}>
-      <h2 className='title-name'>{chapter.titleName}</h2>
+    <Link className='title-name-container' to={`/title/${chaptersSet.titleId}`}>
+      <h2 className='title-name'>{chaptersSet.titleName}</h2>
     </Link>
   </div>
 )

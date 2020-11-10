@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import TitleInfo from '../../components/TitleInfo'
 import API from '../../utils/API.js';
 
@@ -35,7 +36,9 @@ const TitleDetails = () => {
         {title && 
           title.chapters.map(chapter => 
             <div className='chapter-line'>
-              <span>Capitulo {chapter.num} {chapter.name? `- ${chapter.name}`: ''}</span>
+              <Link className='chapter-num' to={`/title/${title.name.split(' ').join('')}/chapter/${chapter.id}`}>
+                <span>Capitulo {chapter.num} {chapter.name? `- ${chapter.name}`: ''}</span>
+              </Link>
               <span className='chapter-date'>{dateFormatted(chapter.createdAt)}</span>
             </div>
         )}

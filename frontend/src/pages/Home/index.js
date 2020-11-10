@@ -34,8 +34,8 @@ const Home = () => {
                 <span>{dateFormatted(date)}</span>
               </div>
               <div className='chapters-date-content'>
-                {chapters[date].map( chapter => 
-                  <ChapterCard chapter={chapter} />
+                {chapters[date].map( chaptersSet => 
+                  <ChapterCard chaptersSet={chaptersSet} />
                 )}
               </div>
             </div>
