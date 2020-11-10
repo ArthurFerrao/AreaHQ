@@ -19,7 +19,7 @@ const Home = () => {
     return datesSorted
   }
 
-  const dateFormated = (dateString) => {
+  const dateFormatted = (dateString) => {
     const date = new Date(dateString)
     return new Intl.DateTimeFormat().format(date)
   }
@@ -31,7 +31,7 @@ const Home = () => {
           orderDateList().map( date =>
             <div className='chapters-date-container'>
               <div className='date'>
-                <span>{dateFormated(date)}</span>
+                <span>{dateFormatted(date)}</span>
               </div>
               <div className='chapters-date-content'>
                 {chapters[date].map( chapter => 

@@ -16,7 +16,7 @@ const TitleDetails = () => {
       });
   }, []);
 
-  const dateFormated = (dateString) => {
+  const dateFormatted = (dateString) => {
     const date = new Date(dateString)
     return new Intl.DateTimeFormat().format(date)
   }
@@ -31,12 +31,12 @@ const TitleDetails = () => {
       }
       
       <div className='chapters-list'>
-        <h1>Capitulos</h1>
+        <h2>Capitulos</h2>
         {title && 
           title.chapters.map(chapter => 
             <div className='chapter-line'>
               <span>Capitulo {chapter.num} {chapter.name? `- ${chapter.name}`: ''}</span>
-              <span>{dateFormated(chapter.createdAt)}</span>
+              <span className='chapter-date'>{dateFormatted(chapter.createdAt)}</span>
             </div>
         )}
       </div>

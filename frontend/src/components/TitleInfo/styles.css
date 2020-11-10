@@ -17,6 +17,10 @@
   margin-bottom: 0.8rem;
 }
 
+.info-header h2 {
+  color: rgb(65, 65, 65);
+}
+
 .title-info p {
   margin-top: 1rem;
   color: #414141;

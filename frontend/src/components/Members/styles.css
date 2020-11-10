@@ -1,6 +1,11 @@
 .members {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   color: rgb(68, 68, 68);
   font-size: 0.8rem;
+}
+
+.member-container {
+  white-space: nowrap;
 }

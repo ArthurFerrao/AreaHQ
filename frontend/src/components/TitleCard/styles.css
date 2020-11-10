@@ -3,6 +3,7 @@
   flex-direction: row;
   margin-bottom: 2rem;
   padding: 0 2rem;
+  font-size: 0.8rem;
 }
 
 .card-img {
@@ -19,13 +20,17 @@
 
 .card-title {
   display: inline-block;
-  color: black;
+  color: rgb(65, 65, 65);
   font-weight: normal;
 }
 
 .card-info p {
-  height: 4rem;
   margin-top: 1rem;
   overflow: hidden;
   color: #6A6A6A;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }

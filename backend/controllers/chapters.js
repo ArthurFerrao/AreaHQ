@@ -45,7 +45,7 @@ const findTitle = (id) => {
 const filterChapters = () => {
     return chaptersDB
             .reduce((unique, chapter) => {
-                const findC = unique.find(c => c.titleId === chapter.titleId && getDateFormated(c.createdAt) === getDateFormated(chapter.createdAt))
+                const findC = unique.find(c => c.titleId === chapter.titleId && getDateFormatted(c.createdAt) === getDateFormatted(chapter.createdAt))
    
                 if(findC) {
                     index = unique.map(u => u.id).indexOf(findC.id)
@@ -59,12 +59,12 @@ const filterChapters = () => {
 const groupByDate = (chapters) => {
     return chapters
             .reduce((prevCharapters, chapter) => {
-                (prevCharapters[getDateFormated(chapter.createdAt)] = prevCharapters[getDateFormated(chapter.createdAt)] || []).push(chapter);
+                (prevCharapters[getDateFormatted(chapter.createdAt)] = prevCharapters[getDateFormatted(chapter.createdAt)] || []).push(chapter);
                 return prevCharapters;
             }, {});
 }
 
-const getDateFormated = (date) => {
-    const dateFormated = new Date(date);
-    return dateFormated.toDateString();
+const getDateFormatted = (date) => {
+    const dateFormatted = new Date(date);
+    return dateFormatted.toDateString();
 }

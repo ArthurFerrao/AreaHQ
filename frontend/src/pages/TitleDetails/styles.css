@@ -5,6 +5,10 @@
   margin: 2rem auto;
 }
 
+.chapters-list h2 {
+  color: rgb(65, 65, 65);
+}
+
 .chapter-line {
   display: flex;
   justify-content: space-between;
@@ -32,4 +36,8 @@
   background-position: center;
   background-size: 100% auto;
   filter: opacity(30%);
+}
+
+.chapter-date {
+  color: #888787;
 }
