@@ -2,7 +2,10 @@ const chaptersDB = require('../data/chapters.json');
 const titlesDB = require('../data/titles.json');
 
 exports.getAll = (req, res) => {
-    const chapters = chaptersDB.map(c => ({...c, ...findTitle(c.titleId)}));
+    const chaptersFiltered = filterChapters().map(c => ({...c, ...findTitle(c.titleId)}));
+
+    const chapters = groupByDate(chaptersFiltered);
+
     return res.status(200).json(chapters);
 };
 
@@ -37,4 +40,31 @@ const findTitle = (id) => {
     return titlesDB
             .map(t => ({titleImage: t.image, titleName: t.name, titleId: t.id}))
             .find(t => t.titleId === id);
+}
+
+const filterChapters = () => {
+    return chaptersDB
+            .reduce((unique, chapter) => {
+                const findC = unique.find(c => c.titleId === chapter.titleId && getDateFormated(c.createdAt) === getDateFormated(chapter.createdAt))
+   
+                if(findC) {
+                    index = unique.map(u => u.id).indexOf(findC.id)
+                    unique[index] = {...unique[index], chapters:[...unique[index].chapters, chapter.num]}
+                }
+
+                return findC ? unique : [...unique, {...chapter, chapters:[chapter.num]}]
+            } , [])
+}
+
+const groupByDate = (chapters) => {
+    return chapters
+            .reduce((prevCharapters, chapter) => {
+                (prevCharapters[getDateFormated(chapter.createdAt)] = prevCharapters[getDateFormated(chapter.createdAt)] || []).push(chapter);
+                return prevCharapters;
+            }, {});
+}
+
+const getDateFormated = (date) => {
+    const dateFormated = new Date(date);
+    return dateFormated.toDateString();
 }

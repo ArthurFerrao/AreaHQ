@@ -42,5 +42,49 @@
     ],
     "image": "https://vidadecolecionador.files.wordpress.com/2012/02/dbvrq.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 3,
+    "createdAt": "25/10/2020 15:40:22",
+    "name": "The promised neverland",
+    "type": "Quadrinho",
+    "categories": [
+      "Ação", "Aventura"
+    ],
+    "members":[
+      {"name": "Echiro Oda", "activity": "all"}
+    ],
+    "image": "https://i.pinimg.com/originals/1c/7a/d2/1c7ad2b1d1e41ca509f0ced9f72f2888.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 4,
+    "createdAt": "25/10/2020 15:40:22",
+    "name": "Fire Force",
+    "type": "Quadrinho",
+    "categories": [
+      "Ação", "Aventura", "Comédia"
+    ],
+    "members":[
+      {"name": "Echiro Oda", "activity": "Autor"},
+      {"name": "Fulano", "activity": "Artista"}
+    ],
+    "image": "https://img1.ak.crunchyroll.com/i/spire1/6c32a7dd75c1169ef530fc21fe0ad3281530879962_full.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 5,
+    "createdAt": "25/10/2020 15:40:22",
+    "name": "Demon slayer",
+    "type": "Quadrinho",
+    "categories": [
+      "Ação", "Aventura", "Comédia"
+    ],
+    "members":[
+      {"name": "Echiro Oda", "activity": "Autor"},
+      {"name": "Fulano", "activity": "Artista"}
+    ],
+    "image": "https://i0.wp.com/www.otakupt.com/wp-content/uploads/2020/03/Kimetsu-no-Yaiba-pela-Panini-ter%C3%A1-p%C3%B4ster-no-primeiro-volume-2.jpg?resize=566%2C800&ssl=1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 ]

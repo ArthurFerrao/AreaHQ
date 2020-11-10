@@ -20,15 +20,27 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 
-.chapter-num {
+.numbers-container {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+}
+
+.number-box {
   padding: 0.5rem 0.8rem;
-  border-radius: 0 10px 0 0;
-  background-color: #254E79;
+  background-color: #999898;
   color: #e7e6e6;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.number-box:last-child {
+  border-top-right-radius: 0.2rem;
+}
+
+.number-box:first-child {
+  background-color: #254E79;
+  border-bottom-left-radius: 0.2rem;
 }
 
 .title-name-container {
