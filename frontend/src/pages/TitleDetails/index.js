@@ -32,12 +32,15 @@ const TitleDetails = () => {
       }
       
       <div className='chapters-list'>
-        <h2>Capitulos</h2>
+        <div className='chapters-list-header'>
+          <h2>Capítulos</h2>
+          <div className='num-chapters'>{title && title.chapters.length}</div>
+        </div>
         {title && 
           title.chapters.map(chapter => 
             <div className='chapter-line'>
               <Link className='chapter-num' to={`/title/${title.name.split(' ').join('')}/chapter/${chapter.id}`}>
-                <span>Capitulo {chapter.num} {chapter.name? `- ${chapter.name}`: ''}</span>
+                <span>Capítulo {chapter.num} {chapter.name? `- ${chapter.name}`: ''}</span>
               </Link>
               <span className='chapter-date'>{dateFormatted(chapter.createdAt)}</span>
             </div>

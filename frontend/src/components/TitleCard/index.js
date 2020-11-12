@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CategoryBox from '../CategoryBox';
+import Categories from '../Categories';
 import Members from '../Members';
 
 import './styles.css'
@@ -18,9 +18,7 @@ const TitleCard = ({title}) => {
           </Link>
           <Members members={title.members}/>
         </div>
-        <div>
-          {title.categories.map(category => <CategoryBox key={category} category={category} />)}
-        </div>
+        <Categories categories={title.categories} />
         <p>{title.description}</p>
       </div>
     </div>

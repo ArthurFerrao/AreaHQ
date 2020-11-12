@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryBox from '../CategoryBox';
+import Categories from '../Categories';
 import Members from '../Members';
 
 import './styles.css';
@@ -12,9 +12,7 @@ const TitleInfo = ({ title }) => (
         <h2>{title.name}</h2>
         <Members members={title.members}/>
       </div>
-      <div>
-        {title.categories.map(category => <CategoryBox key={category} category={category} />)}
-      </div>
+      <Categories categories={title.categories} />
       <p>{title.description}</p>
     </div>
   </div>

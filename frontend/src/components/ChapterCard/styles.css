@@ -39,8 +39,15 @@
 }
 
 .number-box:first-child {
-  background-color: #254E79;
   border-bottom-left-radius: 0.2rem;
+}
+
+.number-box:hover {
+  background-color: #254E79;
+}
+
+.number-box:active {
+  transform: scale(0.98);
 }
 
 .title-name-container {

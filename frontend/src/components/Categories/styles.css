@@ -1,0 +1,5 @@
+.categories-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}

@@ -49,10 +49,10 @@ const filterChapters = () => {
    
                 if(findC) {
                     index = unique.map(u => u.id).indexOf(findC.id)
-                    unique[index] = {...unique[index], chapters:[...unique[index].chapters, chapter.num]}
+                    unique[index] = {...unique[index], chapters:[...unique[index].chapters, {id: chapter.id, num: chapter.num}]}
                 }
 
-                return findC ? unique : [...unique, {...chapter, chapters:[chapter.num]}]
+                return findC ? unique : [...unique, {...chapter, chapters:[{id: chapter.id, num: chapter.num}]}]
             } , [])
 }
 
