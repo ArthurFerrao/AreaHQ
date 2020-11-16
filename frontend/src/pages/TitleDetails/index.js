@@ -15,7 +15,7 @@ const TitleDetails = () => {
       .then(res => {
         setTitle(res.data);
       });
-  }, []);
+  }, [titleId]);
 
   const dateFormatted = (dateString) => {
     const date = new Date(dateString)

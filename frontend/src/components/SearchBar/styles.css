@@ -1,6 +1,23 @@
 .search-bar input {
   background-color: #DDDDDD;
-  padding: 7px;
+  width: 14rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 3px;
+}
+
+.option-img {
+  max-width: 2rem;
+}
+
+.option-label {
+  margin-left: 1rem;
+  color: #808083;
+}
+
+.input-option {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
