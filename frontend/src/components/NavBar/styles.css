@@ -33,6 +33,14 @@
   color: #808080;
 }
 
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:active {
+  transform: scale(0.99);
+}
+
 .login-btn {
   color: #FF4141;
 }
