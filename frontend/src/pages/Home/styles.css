@@ -1,7 +1,8 @@
 .chapters-date-list {
   display: flex;
   flex-direction: column;
-  margin: 3rem auto;
+  margin: 0 auto;
+  margin-top: 6rem;
   max-width: 60rem;
   background-color: #fff;
   border-radius: 5px;
