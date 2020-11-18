@@ -9,16 +9,16 @@ const getPathFormatted = ({ titleName, id }) => {
 
 const ChapterCard = ({chaptersSet}) => (
   <div className='chapter-card'>
-    <Link className='img-container' to={getPathFormatted(chaptersSet)}>
-      <div className='chapter-img' style={{backgroundImage: `url(${chaptersSet.titleImage})`}}></div>
+    <div className='img-container' style={{backgroundImage: `url(${chaptersSet.titleImage})`}}>
+      <Link className='chapter-img' to={getPathFormatted(chaptersSet)}></Link>
       <div className='numbers-container'>
         {chaptersSet.chapters.map(chapter => 
-          <Link className='number-box' to={getPathFormatted(chaptersSet)}>
+          <Link key={chapter.id} className='number-box' to={getPathFormatted(chaptersSet)}>
             {chapter.num}
           </Link>
         )}
       </div>
-    </Link>
+    </div>
     <Link className='title-name-container' to={`/title/${chaptersSet.titleId}`}>
       <h2 className='title-name'>{chaptersSet.titleName}</h2>
     </Link>

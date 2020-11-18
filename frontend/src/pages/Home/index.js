@@ -29,13 +29,13 @@ const Home = () => {
       <div className='chapters-date-list'>
         {chapters && 
           orderDateList().map( date =>
-            <div className='chapters-date-container'>
+            <div key={date} className='chapters-date-container'>
               <div className='date'>
                 <span>{dateFormatted(date)}</span>
               </div>
               <div className='chapters-date-content'>
-                {chapters[date].map( chaptersSet => 
-                  <ChapterCard chaptersSet={chaptersSet} />
+                {chapters[date].map((chaptersSet, id) =>
+                  <ChapterCard key={id} chaptersSet={chaptersSet} />
                 )}
               </div>
             </div>
