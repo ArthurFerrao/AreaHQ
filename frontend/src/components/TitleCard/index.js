@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Status from '../Status';
 import Categories from '../Categories';
 import Members from '../Members';
 
 import './styles.css'
 
-const TitleCard = ({title}) => {
+const TitleCard = ({ title }) => {
   return (
     <div className='title-card'>
-      <Link to={`/title/${title.id}`}>
+      <Link className='card-img-container' to={`/title/${title.id}`}>
         <img className='card-img' src={title.image}/>
+        <Status status={title.status} style={{position: 'absolute', top: '0.5rem', right: '0.5rem'}}/>
       </Link>
       <div className='card-info'>
         <div className='card-header'>
@@ -25,4 +27,4 @@ const TitleCard = ({title}) => {
   )
 }
 
-export default TitleCard
+export default TitleCard;

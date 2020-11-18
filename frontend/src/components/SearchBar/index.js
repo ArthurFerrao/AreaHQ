@@ -20,8 +20,8 @@ const SearchBar = () => {
   }
 
   return (
-    <div className='search-bar'>
       <Autocomplete
+        className='search-bar'
         clearOnEscape
         autoHighlight
         inputValue={inputValue}
@@ -41,7 +41,6 @@ const SearchBar = () => {
           </div>
         )}
       />
-    </div>
   );
 }
 export default SearchBar;

@@ -3,6 +3,10 @@
   flex-direction: column;
   margin: 3rem auto;
   max-width: 60rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e1e4e8;
+  padding: 2rem 0;
 }
 
 .date {

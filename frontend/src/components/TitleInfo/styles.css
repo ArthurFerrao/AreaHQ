@@ -21,6 +21,15 @@
   color: rgb(65, 65, 65);
 }
 
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: rgb(65, 65, 65);
+}
+
 .title-info p {
   margin-top: 1rem;
   color: #414141;

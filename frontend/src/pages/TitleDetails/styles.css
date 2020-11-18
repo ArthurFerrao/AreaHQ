@@ -1,8 +1,12 @@
 .title-details .chapters-list {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
   max-width: 50rem;
   margin: 1rem auto;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e1e4e8;
 }
 
 .chapters-list h2 {
@@ -46,7 +50,7 @@
 }
 
 .chapters-list-header {
-  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
   display: flex;
   gap: 0.5rem;
   align-items: center;
