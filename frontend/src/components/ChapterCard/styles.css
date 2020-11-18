@@ -1,11 +1,11 @@
 .chapter-card {
-  width: 170px;
+  width: 180px;
   display: flex;
   flex-direction: column;
 }
 
 .img-container {
-  height: 230px;
+  height: 240px;
   display: inline-block;
   position: relative;
 }

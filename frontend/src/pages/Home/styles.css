@@ -6,7 +6,7 @@
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #e1e4e8;
-  padding: 2rem 0;
+  padding: 2rem 3rem;
 }
 
 .date {
@@ -14,27 +14,12 @@
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #254E79;
   color: #254E79;
-  margin: 0 3rem;
 }
 
 .chapters-date-content {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
   margin-top: 1rem;
-}
-
-@media only screen and (max-width: 1000px) {
-  .chapters-date-content {
-    grid-template-columns: auto auto auto;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .chapters-date-content {
-    grid-template-columns: auto;
-  }
 }
