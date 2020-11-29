@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Titles from './pages/Titles'
 import TitleDetails from './pages/TitleDetails'
 import Reader from './pages/Reader'
+import Auth from './pages/Auth'
 import NavBar from './components/NavBar'
 import {
   BrowserRouter as Router,
@@ -15,18 +16,11 @@ function App() {
     <Router>
       <NavBar/>
       <Switch>
-        <Route path='/' exact>
-          <Home/>
-        </Route>
-        <Route path='/titles' exact>
-          <Titles/>
-        </Route>
-        <Route path='/title/:titleId' exact>
-          <TitleDetails/>
-        </Route>
-        <Route path='/title/:titleName/chapter/:chapterId' exact>
-          <Reader/>
-        </Route>
+        <Route exact path='/' render={() => <Home/>} />
+        <Route exact path='/titles' render={() => <Titles/>} />
+        <Route exact path='/title/:titleId' render={() => <TitleDetails/>} />
+        <Route exact path={["/login", "/register"]} render={() => <Auth/>} />
+        <Route exact path='/title/:titleName/chapter/:chapterId' render={() => <Reader/>} />
       </Switch>
     </Router>
   )

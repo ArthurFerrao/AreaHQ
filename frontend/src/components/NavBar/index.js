@@ -17,7 +17,7 @@ const NavBar = () => {
         <MenuIcon id='hambuger-menu-icon' className='nav-btn' style={{ color: '#808080' }} fontSize='large' onClick={() => setOpenMenu(!openMenu)}/>
         <ul className={openMenu? 'nav-btns-container menu-active': 'nav-btns-container'}>
           <Link to='/titles' onClick={() => setOpenMenu(false)} className='nav-btn'>Títulos</Link>
-          <Link to='/' onClick={() => setOpenMenu(false)} className='nav-btn login-btn'>Login</Link>
+          <Link to='/login' onClick={() => setOpenMenu(false)} className='nav-btn login-btn'>Login</Link>
           <Link to='/' onClick={() => setOpenMenu(false)} className='sign-up-btn'>Quero publicar</Link>
         </ul>
       </div>

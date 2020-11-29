@@ -36,7 +36,8 @@
   flex-direction: row;
   align-items: center;
   margin-right: 2rem;
-  justify-content: end;
+  justify-content: space-around;
+  place-self: center stretch;
 }
 
 .nav-btn {
@@ -50,6 +51,7 @@
 
 .nav-btn:active {
   transform: scale(0.99);
+  user-select: none;
 }
 
 .login-btn {
