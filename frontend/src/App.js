@@ -4,7 +4,7 @@ import Titles from './pages/Titles'
 import TitleDetails from './pages/TitleDetails'
 import Reader from './pages/Reader'
 import Auth from './pages/Auth'
-import NavBar from './components/NavBar'
+import Navbar from './components/Navbar'
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <NavBar/>
+        <Navbar/>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/titles' component={Titles} />

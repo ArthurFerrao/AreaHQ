@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import AuthContext from './AuthContext';
 
 const AuthProvider = ({ children }) => {
-  const setToken = (token) => {
-    if(token) return localStorage.setItem('areahq-token', token);
-  }
+  const [token, setToken] = useState(localStorage.getItem('areahq-token'));
+  
+  const setAuthToken = useCallback(token => {
+    localStorage.setItem('areahq-token', token);
+    setToken(token);
+  }, ['areahq-token']);
 
-  const removeToken = () => {
+  const removeAuthToken = useCallback(() => {
     localStorage.removeItem('areahq-token');
-  }
-
-  const token = () => {
-    return localStorage.getItem('areahq-token');
-  }
+    setToken(undefined);
+  }, ['areahq-token']);
 
   return (
     <AuthContext.Provider
       value={{
         token,
-        setToken,
-        removeToken
+        setAuthToken,
+        removeAuthToken
       }}
     >
       {children}

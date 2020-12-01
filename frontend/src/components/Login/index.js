@@ -5,7 +5,7 @@ import authAPI from '../../services/auth';
 
 const Login = () => {
   const [ user, setUser ] = useState({username: '', password: ''});
-  const { setToken } = useContext(AuthContext);
+  const { setAuthToken } = useContext(AuthContext);
   const history = useHistory();
 
   const onChange = (e) => {
@@ -17,7 +17,7 @@ const Login = () => {
     const data = await authAPI.login(user)
 
     if(data.token) {
-      setToken(data.token)
+      setAuthToken(data.token)
       return history.push('/');
     }
 

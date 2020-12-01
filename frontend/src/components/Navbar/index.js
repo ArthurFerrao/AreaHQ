@@ -7,16 +7,15 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-const NavBar = () => {
+const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const { token } = useContext(AuthContext);
-  
+
   return (
     <nav className='nav-bar'>
       <div className='nav-bar-container'>
         <Link className='logo' to='/'>Área<span>HQ</span></Link>
         <SearchBar className='teste'/>
-
         <MenuIcon id='hambuger-menu-icon' className='nav-btn' style={{ color: '#808080' }} fontSize='large' onClick={() => setOpenMenu(!openMenu)}/>
         <ul className={openMenu? 'nav-btns-container menu-active': 'nav-btns-container'}>
           <Link to='/titles' onClick={() => setOpenMenu(false)} className='nav-btn'>Títulos</Link>
@@ -32,4 +31,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navbar

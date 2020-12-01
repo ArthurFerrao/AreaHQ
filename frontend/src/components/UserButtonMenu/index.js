@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import AuthContext from '../../contexts/AuthContext';
-import { Link, useHistory } from 'react-router-dom';
 import user from '../../assets/user.jpg';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -9,8 +8,7 @@ import './styles.css';
 
 const UserButtonMenu = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const { removeToken } = useContext(AuthContext);
-  const history = useHistory();
+  const { removeAuthToken } = useContext(AuthContext);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -22,7 +20,7 @@ const UserButtonMenu = () => {
 
   const logout = () => {
     setAnchorEl(null);
-    removeToken();
+    removeAuthToken();
   };
 
   return (
@@ -31,14 +29,6 @@ const UserButtonMenu = () => {
       <Menu
         elevation={1}
         anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
