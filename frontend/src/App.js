@@ -11,17 +11,21 @@ import {
   Route
 } from 'react-router-dom';
 
+import AuthProvider from './contexts/AuthProvider';
+
 function App() {
   return (
     <Router>
-      <NavBar/>
-      <Switch>
-        <Route exact path='/' render={() => <Home/>} />
-        <Route exact path='/titles' render={() => <Titles/>} />
-        <Route exact path='/title/:titleId' render={() => <TitleDetails/>} />
-        <Route exact path={["/login", "/register"]} render={() => <Auth/>} />
-        <Route exact path='/title/:titleName/chapter/:chapterId' render={() => <Reader/>} />
-      </Switch>
+      <AuthProvider>
+        <NavBar/>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/titles' component={Titles} />
+          <Route exact path='/title/:titleId' component={TitleDetails} />
+          <Route exact path={["/login", "/register"]} component={Auth} />
+          <Route exact path='/title/:titleName/chapter/:chapterId' component={Reader} />
+        </Switch>
+      </AuthProvider>
     </Router>
   )
 }

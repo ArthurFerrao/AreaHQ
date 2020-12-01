@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import './styles.css'
+const Register = () => {
+  const [ user, setUser ] = useState({username: '', password: ''});
 
-const Register = ({ setLoginSelected }) => {
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setUser({...user, [name]: value});
+  }
+
+  const onSubmit = () => {
+    
+  }
+
   return (
-    <div className='login-container'>
+    <div className='register-container'>
       <div className='form-container'>
-        <input className='form-input' type='text' placeholder='username'/>
-        <input className='form-input' type='text' placeholder='password'/>
-        <input className='form-input' type='text' placeholder='confirm password'/>
-        <button>Cadastrar</button>
+        <input className='form-input' type='text' placeholder='username' onChange={onChange} value={user.username}/>
+        <input className='form-input' type='password' placeholder='password' onChange={onChange} value={user.password}/>
+        <input className='form-input' type='password' placeholder='confirm password'/>
+        <button type='submit' onClick={onSubmit}>Cadastrar</button>
       </div>
-      <div className='resister-message'>
-        <h6>Já tem conta?</h6> <Link className='resister-btn' to='/login'>Entrar</Link>
+      <div className='auth-message'>
+        <h6>Já tem conta?</h6> <Link className='auth-btn' to='/login'>Entrar</Link>
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import API from '../../utils/API.js';
+import API from '../../services/api.js';
 import ChapterCard from '../../components/ChapterCard';
 
 import './styles.css'

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useHistory } from 'react-router-dom';
-import API from '../../utils/API.js';
+import API from '../../services/api.js';
 
 import './styles.css';
 

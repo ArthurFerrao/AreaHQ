@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TitleCard from '../../components/TitleCard';
-import API from '../../utils/API.js';
+import api from '../../services/api.js';
 
 import './styles.css';
 
@@ -8,7 +8,7 @@ const Titles = () => {
   const [titles, setTitles] = useState([]);
 
   useEffect(() => {
-    API.get("titles")
+    api.get("titles")
       .then(res => {
         setTitles(res.data);
       });
